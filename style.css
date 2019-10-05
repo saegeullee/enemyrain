@@ -1,0 +1,86 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scoreboard {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 30px; 
+    right: 60px;
+    /* background-color: gray; */
+}
+
+.score {
+    margin-top: -10px;
+    font-size: 58px;
+    padding:0;
+}
+
+.bg-img {
+    height: 100vh;
+    width: 150vh;
+}
+
+.hero {
+    background-image: url("img/hero.png");
+    background-size: 300px 100px;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 75px;
+    position: absolute;
+    bottom:4px;
+    left:40%;
+    /* border-right: 1px solid aqua;
+    border-left: 1px solid aqua; */
+}
+
+.hero-left {
+    background-position: -160px 0;
+}
+
+.hero-right {
+    background-position: -220px 0;
+}
+
+.enemy {
+    background-image: url("img/enemy.png");
+    background-size: 200px 100px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    height: 100px;
+    width: 100px;
+    /* border-right: 1px solid red;
+    border-left: 1px solid red; */
+}
+
+.enemy-dead {
+    background-position: -100px 0;
+}
+
+.game-finish {
+
+    display: none;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    font-size: 100px;
+    font-weight: bold;
+    color:red;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
