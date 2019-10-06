@@ -10,14 +10,12 @@ class GameController {
     init() {
         this.score = 5;
         this.isGamePlaying = true;
-        this.initHero()
+        this.initHero();
         this.generateEnemy();
 
         this.scoreBoard = document.getElementsByClassName('score')[0];
         this.scoreBoard.textContent = this.score;
         this.gameFinishNoticeBoard = document.getElementsByClassName('game-finish')[0];
-
-        this.addEventListenerForReplay();
     }
 
     initHero() {
@@ -44,20 +42,8 @@ class GameController {
             if (this.score === 0) {
                 this.gameFinishNoticeBoard.style.display = "block";
                 this.isGamePlaying = false;
-
             }
         }
-    }
-
-    addEventListenerForReplay() {
-        window.addEventListener('keydown', event => {
-            if (event.keyCode === 13) {
-                this.gameFinishNoticeBoard.style.display = "none";
-                this.hero = null;
-                this.isGamePlaying = false;
-                this.init();
-            }
-        })
     }
 }
 
