@@ -1,6 +1,7 @@
 import { Hero } from "./hero.js";
 import { Enemy } from "./enemy.js";
 
+
 class GameController {
 
     constructor() {

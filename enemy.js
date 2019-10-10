@@ -37,11 +37,17 @@ export class Enemy {
         return Math.ceil(Math.random() * (80 - 12) + 12);
     }
 
+    getEnemyIntervalTermRandomly() {
+        return Math.ceil(Math.random() * (100 - 10) + 10);
+    }
+
     makeEnemyMoveDown(enemy) {
+
+        const enemyIntervalTerm = this.getEnemyIntervalTermRandomly();
 
         const interval = setInterval(() => {
 
-            if (this.enemyTop === 86) {
+            if (this.enemyTop === window.height) {
                 this.displayEnemyDead(enemy);
                 clearInterval(interval);
                 setTimeout(() => {
@@ -56,7 +62,7 @@ export class Enemy {
                 clearInterval(interval);
                 this.removeEnemyFromScreen(enemy);
             }
-        }, 50);
+        }, enemyIntervalTerm);
     }
 
     removeEnemyFromScreen(enemy) {
