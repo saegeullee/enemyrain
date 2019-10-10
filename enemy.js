@@ -47,7 +47,7 @@ export class Enemy {
 
         const interval = setInterval(() => {
 
-            if (this.enemyTop === window.height) {
+            if (this.enemyTop === 90) {
                 this.displayEnemyDead(enemy);
                 clearInterval(interval);
                 setTimeout(() => {
